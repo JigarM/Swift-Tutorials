@@ -13,7 +13,7 @@ class myTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        myData = ["Apple", "Banana", "Mango", "Pulms", "Peaches"];
+        myData = ["Apple", "Banana", "Carrot", "Cherry", "Mango", "Melon", "Orange", "Pear", "Pineapple", "Pulms", "Peaches", "Strawberry"];
         
     }
 

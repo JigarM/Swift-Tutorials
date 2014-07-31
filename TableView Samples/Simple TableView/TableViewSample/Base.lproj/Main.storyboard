@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
-        <!--My Table View Controller - Fruits-->
+        <!--My Table View Controller - Fruits & Veg-->
         <scene sceneID="i2Z-a7-dub">
             <objects>
                 <tableViewController id="qZo-D3-sRG" customClass="myTableViewController" customModule="TableViewSample" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,7 +25,7 @@
                             <outlet property="delegate" destination="qZo-D3-sRG" id="XAk-e0-uYs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Fruits" id="UCV-5V-xK5"/>
+                    <navigationItem key="navigationItem" title="Fruits &amp; Veg" id="UCV-5V-xK5"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
