@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2eN-DZ-uGH">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+    </dependencies>
+    <scenes>
+        <!--My Table View Controller - Tableview-->
+        <scene sceneID="IWa-bp-f2n">
+            <objects>
+                <tableViewController id="Vx4-x6-vuG" customClass="MyTableViewController" customModule="SwiftUITableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="22" sectionFooterHeight="22" id="WCG-PN-3ud">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="107" id="D2l-Yk-G5I" customClass="CustomCell" customModule="SwiftUITableView" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D2l-Yk-G5I" id="YPJ-VC-gGj">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3d0-44-4dE">
+                                            <rect key="frame" x="12" y="17" width="70" height="70"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="111" translatesAutoresizingMaskIntoConstraints="NO" id="QJb-aJ-lgF">
+                                            <rect key="frame" x="90" y="10" width="111" height="23"/>
+                                            <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="197" translatesAutoresizingMaskIntoConstraints="NO" id="PkS-9I-TnN">
+                                            <rect key="frame" x="90" y="25" width="197" height="20"/>
+                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="13"/>
+                                            <color key="textColor" red="0.47058826679999999" green="0.47058826679999999" blue="0.47058826679999999" alpha="1" colorSpace="deviceRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="197" translatesAutoresizingMaskIntoConstraints="NO" id="XD4-S5-51K">
+                                            <rect key="frame" x="90" y="50" width="197" height="51"/>
+                                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="12"/>
+                                            <color key="textColor" red="0.47058826679999999" green="0.47058826679999999" blue="0.47058826679999999" alpha="1" colorSpace="deviceRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6V-cO-Tpg">
+                                            <rect key="frame" x="218" y="12" width="69" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="Description" destination="XD4-S5-51K" id="xzu-wa-ZKE"/>
+                                    <outlet property="ProfileDP" destination="3d0-44-4dE" id="IHf-9I-BZw"/>
+                                    <outlet property="ScreenName" destination="PkS-9I-TnN" id="dWf-x7-sCg"/>
+                                    <outlet property="Username" destination="QJb-aJ-lgF" id="DZx-nw-jHT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Vx4-x6-vuG" id="zYS-1I-hjC"/>
+                            <outlet property="delegate" destination="Vx4-x6-vuG" id="PJe-Z1-M3V"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tableview" id="Bb3-bc-eBy"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIg-D0-MOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="361"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mmh-8m-8uX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2eN-DZ-uGH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="w6T-YG-Q1W">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vx4-x6-vuG" kind="relationship" relationship="rootViewController" id="ZgW-P3-Saf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f8n-Tj-Wbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="314" y="366"/>
+        </scene>
+    </scenes>
+</document>
