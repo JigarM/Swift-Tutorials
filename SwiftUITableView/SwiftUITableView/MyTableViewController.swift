@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import QuartzCore
 
 class MyTableViewController: UITableViewController {
@@ -20,6 +21,8 @@ class MyTableViewController: UITableViewController {
         var err: NSError
         var jsonData : NSData = NSData.dataWithContentsOfMappedFile(filePath) as NSData
         var json: NSDictionary = NSJSONSerialization.JSONObjectWithData(jsonData as NSData, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+        let jsonString = JSONStringify(json)
+        //println(jsonString)
         var results: NSArray = json["List"] as NSArray
         return results
         //self.DataList = results
@@ -39,7 +42,6 @@ class MyTableViewController: UITableViewController {
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         return self.DataList.count
     }
-
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         
@@ -50,12 +52,6 @@ class MyTableViewController: UITableViewController {
         var screenname : String = data.objectForKey("screenname") as String
         var description : String = data.objectForKey("description") as String
         var dp : String = data.objectForKey("image") as String
-        
-        /*UIImageView *imageview = [UIImageView alloc] init];
-        imageview.layer.cornerRadius = imageview.frame.size.width / 2;
-        imageview.layer.borderWidth = 3.0f;
-        imageview.layer.borderColor = [UIColor whiteColor].CGColor;
-        imageview.clipsToBounds = YES;*/
         
         //GDC
         var queue=dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
@@ -68,14 +64,14 @@ class MyTableViewController: UITableViewController {
                 cell.ProfileDP.image = UIImage(named:"j.png")
                 var queue=dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
                 
-                var layer:CALayer = cell.ProfileDP.layer!
+                /*var layer:CALayer = cell.ProfileDP.layer!
                 layer.cornerRadius = cell.ProfileDP.frame.size.width / 2
                 layer.borderWidth = 3.0
                 layer.borderColor = UIColor.grayColor().CGColor
-                cell.ProfileDP.clipsToBounds = true
+                cell.ProfileDP.clipsToBounds = true*/
                 
                 
-                /*var layer:CALayer = cell.ProfileDP.layer!
+                var layer:CALayer = cell.ProfileDP.layer!
                 layer.shadowPath = UIBezierPath(rect: layer.bounds).CGPath
                 layer.shouldRasterize = true;
                 layer.rasterizationScale = UIScreen.mainScreen().scale
@@ -85,56 +81,42 @@ class MyTableViewController: UITableViewController {
                 layer.shadowOpacity = 0.4
                 layer.shadowOffset = CGSizeMake(1, 3)
                 layer.shadowRadius = 1.5
-                cell.ProfileDP.clipsToBounds = false*/
+                cell.ProfileDP.clipsToBounds = false
                 
             })
         })
         return cell
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView?, canEditRowAtIndexPath indexPath: NSIndexPath?) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView?, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath?) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView?, moveRowAtIndexPath fromIndexPath: NSIndexPath?, toIndexPath: NSIndexPath?) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView?, canMoveRowAtIndexPath indexPath: NSIndexPath?) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // #pragma mark - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if (segue!.identifier == "Detail") {
+            var tweet = self.DataList[tableView.indexPathForSelectedRow().row] as NSDictionary
+            let DetailVC = segue!.destinationViewController as  DetailViewController
+            DetailVC.Dict = tweet
+            
+            /*let tweet = DataList[tableView.indexPathForSelectedRow().row] as NSDictionary
+            let DetailVC = segue!.destinationViewController as  DetailViewController
+            DetailVC.ProfileBannerImage = tweet["ProfileBanner"] as UIImageView
+            DetailVC.ProfileDPImage = tweet["image"] as UIImageView
+            DetailVC.Username = tweet["Name"] as UILabel*/
+            
+            /*(segue!.destinationViewController.ProfileBannerImage! as UIImageView).image = tweet["ProfileBanner"] as UIImage
+            (segue.destinationViewController.ProfileDPImage as UIImageView).image = tweet["image"] as UIImage
+            (segue.destinationViewController.Username as UILabel).text = tweet["Name"].description
+            (segue.destinationViewController.Screenname as UILabel).text = tweet["screenname"].description*/
+        }
     }
-    */
-
+    
+    func JSONStringify(jsonObj: AnyObject) -> String {
+        var e: NSError?
+        let jsonData = NSJSONSerialization.dataWithJSONObject(
+            jsonObj,
+            options: NSJSONWritingOptions(0),
+            error: &e)
+        if e {
+            return ""
+        } else {
+            return NSString(data: jsonData, encoding: NSUTF8StringEncoding)
+        }
+    }
 }
