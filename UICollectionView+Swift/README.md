@@ -16,24 +16,14 @@ Simple Tests of Swift Language (no Objective-C)
 + JSON string
 + Provide tag and Draw the Custom Cell
 
-### App Previews
+App Previews
 ====================
 
-Appicon :
+# Hows Flow looks like ?: 
 
-![](http://i1282.photobucket.com/albums/a534/jigarm_0809/iOSSimulatorScreenShot15-Aug-201481655am_zps741fc965.png)
-
-UICollectionView :
-
-![](http://i1282.photobucket.com/albums/a534/jigarm_0809/iOSSimulatorScreenShot15-Aug-201481807am_zps447269ee.png)
-
-Profile Screeen : 
-
-![](http://i1282.photobucket.com/albums/a534/jigarm_0809/iOSSimulatorScreenShot15-Aug-201481637am_zps76d18ee0.png)
-
-
-
-============================
+<p align="center">
+<a href="http://s1282.photobucket.com/user/jigarm_0809/media/CollectionView_zps59d7aedf.gif.html" target="_blank"><img src="http://i1282.photobucket.com/albums/a534/jigarm_0809/CollectionView_zps59d7aedf.gif" border="0" alt=" photo CollectionView_zps59d7aedf.gif"/></a>
+</p>
 
 ToDo (Working on)
 ==========
@@ -67,19 +57,11 @@ for item: AnyObject in self.collectionView.visibleCells(){
 }
 ```
 
-<<<<<<< HEAD
 # Require
 OSX 10.9.3 and Xcode 6.x (beta for now)
 
 # Swift
 =======
-=======
-<h1>Require</h1>
-OSX 10.9.3 and Xcode 6.x (beta for now)
-
-Swift
----
->>>>>>> FETCH_HEAD
 
 This project will highlight a few of the core language features about Swift, but I would read through these documents, I found them useful to learn more about Swift and understanding teh structure and syntax of the language:
 
@@ -89,15 +71,11 @@ This project will highlight a few of the core language features about Swift, but
 * [__Swift Language Highlights by Matt Galloway__](http://www.raywenderlich.com/73997/swift-language-highlights)
 
 
-<<<<<<< HEAD
 # Development
 
 * [Jigar Maheshwari](http://twitter.com/jigar0809)
 
 # License
-=======
-## License
->>>>>>> FETCH_HEAD
 
           The MIT License (MIT)
         
