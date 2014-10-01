@@ -10,24 +10,36 @@
 	<string>UICollectionView+Swift</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>812EDC1B8485096F830DE672AD8EE61920C42A8A</key>
+		<string>https://github.com/JigarM/Swift-Tutorials.git</string>
 		<key>A75C365B94D8A323F9E2928B517E8442A83B6338</key>
 		<string>https://github.com/JigarM/UICollectionView-Swift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>UICollectionView+Swift.xcodeproj</string>
+	<string>UICollectionView+Swift/UICollectionView+Swift.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>812EDC1B8485096F830DE672AD8EE61920C42A8A</key>
+		<string>../../..</string>
 		<key>A75C365B94D8A323F9E2928B517E8442A83B6338</key>
-		<string>../..</string>
+		<string>../../../../UICollectionView-Swift</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/JigarM/UICollectionView-Swift.git</string>
+	<string>https://github.com/JigarM/Swift-Tutorials.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>A75C365B94D8A323F9E2928B517E8442A83B6338</string>
+	<string>812EDC1B8485096F830DE672AD8EE61920C42A8A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>812EDC1B8485096F830DE672AD8EE61920C42A8A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Swift-Tutorials</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
